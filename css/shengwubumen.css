@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin:0;
+}
+/* body{ */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige; */
+:root{
+    --color-primary: #112339;
+    --color-white: #e9e9e9;
+    --color-black: #116bd9;
+    --color-black-1: #212b38;
+    --color-yellow: rgb(222, 139, 71);
+    --color-green: rgba(69, 152, 61, 0.886);
+}
+*{
+    margin: 0;
+    padding: 0;
+    /*标准盒子*/
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: var(--color-white);
+    
+    /*background-size: cover;*/
+}
+
+p{
+    font-family: '方正兰亭';
+}
+/*设置logo属性*/
+.logo{
+    color: var(--color-white);
+    font-size: 45px;
+}
+.logo span{
+    color: var(--color-primary);
+}
+/*第一个div*/
+.menu-bar{
+    background-color: var(--color-green);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    /*让列表移到右边去*//*均匀的分配每一个元素*/
+    justify-content: space-between;
+    /*让文字居中*/
+    align-items: center;
+    padding: 0 5%;
+    /*绝对定位*/
+    position: absolute;
+}
+/*ul*/
+.menu-bar ul{
+    list-style: none;
+    display: flex;
+}
+/*li*/
+.menu-bar ul li{
+    /*width: 120px;*/
+    padding: 10px 20px;
+    /*text-align: center;*/
+    position: relative;
+}
+/*a*/
+.menu-bar ul li a{
+    font-size: 25px;
+    color: var(--color-white);
+    /*取消下划线*/
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.menu-bar ul li a:hover{
+    color: #000;
+}
+/*让下拉列表平铺*/
+.dropdown-menu{
+    display: none;
+}
+.menu-bar ul li:hover .dropdown-menu{
+    display: block;
+    /*绝对定位*/
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-green);
+}
+.menu-bar ul li:hover .dropdown-menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .dropdown-menu ul li{
+    width: 150px;
+    padding: 10px;
+}
+
+.biaotou{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toubu{
+    list-style: none;
+}
+.biaotou img{
+    margin-top: 20px ;
+    width: 500px;
+}
+section{
+    border:1px solid var(--color-white);;
+    /* position: relative;
+    top: 250px;
+    right: 2.5%;
+    left: 2.5%; */
+    /* height: 1500px; */
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;  
+    display: flex; 
+    justify-content: center;
+    /* align-items: center; */
+}
+.bleft{
+    width: 720px;
+    /* ,: left; */
+    background-color: white;
+    margin-right: 10px;
+    top: 0;
+}
+.bright{
+    border:2px  solid rgb(69, 63, 63);
+    width: 720px; 
+    /* float: right; */
+    height: 100%;
+    background-color: bisque;
+    margin-left: 10px;
+}
+.lbx1{
+    border: 2px solid rgb(69, 63, 63);
+    padding: 0px;
+    letter-spacing: 4px;
+}
+.lbx2{
+    border: 2px solid rgb(48, 43, 43);
+    padding: 0px;
+    letter-spacing: 2px;
+}
+.rbx1{
+    /* border:2px 2px 2px 2px solid rgb(69, 63, 63); */
+    padding: 10px;
+    letter-spacing: 1px;
+    /* margin-top: 20px; */
+}
+.rbx2{
+    /* border: 2px 2px 2px 2px solid rgb(69, 63, 63); */
+    padding: 0px;
+    letter-spacing: 1px;
+    margin-top: 75px;
+}
+.rbx3{
+    /* border: 2px 2px 2px 2px solid rgb(69, 63, 63); */
+    padding: 10px;
+    letter-spacing: 1px;
+    margin-top: 52px;
+}
+.logo{
+    color: var(--color-white);
+    font-size: 45px;
+}
+.logo span{
+    color: var(--color-primary);
+}
+/*第一个div*/
+.menu-bar{
+    background-color: var(--color-green);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    /*让列表移到右边去*//*均匀的分配每一个元素*/
+    justify-content: space-between;
+    /*让文字居中*/
+    align-items: center;
+    padding: 0.1%;
+    /*相对定位*/
+    position: relative;
+}
+/*ul*/
+.menu-bar ul{
+    list-style: none;
+    display: flex;
+}
+/*li*/
+.menu-bar ul li{
+    /*width: 120px;*/
+    padding: 10px 20px;
+    /*text-align: center;*/
+    position: relative;
+}
+/*a*/
+.menu-bar ul li a{
+    font-size: 25px;
+    color: var(--color-white);
+    /*取消下划线*/
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.menu-bar ul li a:hover{
+    color: var(--color-black-1);
+}
+/*让下拉列表平铺*/
+.dropdown-menu{
+    display: none;
+}
+.menu-bar ul li:hover .dropdown-menu{
+    display: block;
+    /*绝对定位*/
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-green);
+}
+.menu-bar ul li:hover .dropdown-menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .dropdown-menu ul li{
+    width: 150px;
+    padding: 10px;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    /* background: #868686; */
+    height: 250px;
+}
+footer .down{
+    width: 1500px;
+    height: 250px;
+    /* background-color: aqua;  */
+    margin: 0 auto;
+}
+.right,.left{
+    width: 700px;
+    height: 200px;
+    /* background-color: #212b38;  */
+    float: left;
+    margin: 25px;
+}
+footer{
+    background: rgba(145, 145, 145, 0.735);
+}
+div>.right_1,.right_2{
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-top: 45px;
+    margin-left: 150px;
+}
+.left_1{
+    margin-top: 65px;
+    margin-left: 300px;
+}

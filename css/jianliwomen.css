@@ -1,0 +1,321 @@
+*{
+    margin            : 0;
+    padding           : 0;
+}
+section{
+    width             : 1100px;
+    margin            : 0 auto;
+    /*background-color  : white;*/
+}
+header,footer{
+    height            : 100px;
+}
+header{
+    width: 1700px;
+}
+
+
+
+/* -----导航栏------*/
+:root{
+    --color-primary: #112339;
+    --color-white: #e9e9e9;
+    --color-black: #116bd9;
+    --color-black-1: #212b38;
+    --color-yellow: rgb(222, 139, 71);
+    --color-green: rgba(69, 152, 61, 0.886);
+}
+*{
+    margin: 0;
+    padding: 0;
+    /*标准盒子*/
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: var(--color-white);
+    
+    /*background-size: cover;*/
+}
+/*设置logo属性*/
+.logo{
+    color: var(--color-white);
+    font-size: 45px;
+}
+.logo span{
+    color: var(--color-primary);
+}
+/*第一个div*/
+.menu-bar{
+    background-image: linear-gradient(to right,rgb(222, 139, 71),rgba(69, 152, 61, 0.886),#116bd9);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    /*让列表移到右边去*//*均匀的分配每一个元素*/
+    justify-content: space-between;
+    /*让文字居中*/
+    align-items: center;
+    padding: 0 5%;
+    /*绝对定位*/
+    position: absolute;
+}
+/*ul*/
+.menu-bar ul{
+    list-style: none;
+    display: flex;
+}
+/*li*/
+.menu-bar ul li{
+    /*width: 120px;*/
+    padding: 10px 20px;
+    /*text-align: center;*/
+    position: relative;
+}
+/*a*/
+.menu-bar ul li a{
+    font-size: 25px;
+    color: var(--color-white);
+    /*取消下划线*/
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.menu-bar ul li a:hover{
+    color: #000;
+}
+/*让下拉列表平铺*/
+.dropdown-menu{
+    display: none;
+}
+.menu-bar ul li:hover .dropdown-menu{
+    display: block;
+    /*绝对定位*/
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 100%;
+    background-image: linear-gradient(to right, rgb(222, 139, 71),rgba(69, 152, 61, 0.886),#116bd9);
+}
+.menu-bar ul li:hover .dropdown-menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .dropdown-menu ul li{
+    width: 150px;
+    padding: 10px;
+}
+
+/*红旗*/
+.hongqi{
+    position: fixed;
+    top: 30%;
+    left: 10px;
+}
+/*侧边按钮*/
+.anniu li{
+    list-style: none;
+    margin-top: 30px;
+}
+.anniu{
+    position: fixed;
+    top: 40%;
+    right: 40px;
+}
+
+
+button{
+    width: 180px;
+    height: 60px;
+    background-image: linear-gradient(to right,rgb(222, 139, 71),rgba(69, 152, 61, 0.886),#116bd9);/*#262626;*/
+    border-radius: 60px;
+    letter-spacing: 6px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.85);
+    border: 3px solid #000;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+button::before{
+    content: "";
+    width: 70%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: -10px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+}
+button:hover::before{
+    left: 200px;
+    
+}
+
+button::after{
+    content: "";
+    width: 50px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: -70px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+button:hover::after{
+    left: 200px;
+
+}
+
+
+
+/*--------内容-------*/
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: ; */
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: #fff;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transform: .5s;
+}
+
+.container .card:hover{
+    transform: translateY(-25px);
+}
+
+.container .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+.container .card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    filter: blur(30px);
+}
+.container .card:nth-child(2):after,
+.container .card:nth-child(2)::before{
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.container .card:nth-child(3):after,
+.container .card:nth-child(3)::before{
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+.container .card  span{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    z-index: 1;
+}
+
+.container .card span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, 0.1);
+    pointer-events: none;      
+}
+
+.container .card .content{
+    z-index: 2;
+    position: relative;
+    padding: 20px 40px;
+
+}
+.container .card .content h2{
+    font-size: 1.7em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .card .content p{
+    font-size: 1.3em;
+    font-family: '黑体';
+    color: #fff;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+.one{
+    margin-top: 40px;
+    border: 6px solid; 
+    border-radius: 25px;
+    border-color: var(--color-green);
+    background-color: #e0dfdf8d;
+}
+
+.one_one p{
+    font-family: "黑体";
+    font-size: 20px;
+    padding: 20px;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    /* background: #868686; */
+    height: 250px;
+}
+footer .down{
+    width: 1500px;
+    height: 250px;
+    /* background-color: aqua;  */
+    margin: 0 auto;
+}
+.right,.left{
+    width: 700px;
+    height: 200px;
+    /* background-color: #212b38;  */
+    float: left;
+    margin: 25px;
+}
+footer{
+    background: rgba(145, 145, 145, 0.735);
+}
+div>.right_1,.right_2{
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-top: 45px;
+    margin-left: 150px;
+}
+.left_1{
+    margin-top: 65px;
+    margin-left: 300px;
+}
